@@ -1,5 +1,5 @@
 # Cracking-Simple-Ciphers-Project
-Breaking Simplue Substitution Cipher Programatically
+Breaking Simple Substitution Ciphers Programatically
 
 In this projects, students will explore the complexities of classical ciphers such as the Caesar Cipher as well as a more generic polyalphabetic cipher and try to break them automatically.
 
