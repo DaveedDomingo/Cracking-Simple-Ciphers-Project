@@ -307,10 +307,10 @@ Running our program should be like the following:
 \end{commandline}
 
 \subsection{Testing your program}
-In order to test your program, provided should be a folder called \textbf{CipherSample} with a sample ciphertext as well as folder of known sample texts
+In order to test your program, provided should be a folder called \textbf{CipherSample} with a sample ciphertext along with its corresponding plaintext and known text.
 \begin{enumerate}
-\item \textbf{ciphertext-sample.txt} - a sample ciphertext encrypted using a caesar cipher
-\item \textbf{knowntext-sample.txt} - a folder containing text files relating to the original plaintext
+\item \textbf{ciphertext-sample.txt} - a sample ciphertext encrypted using an arbitrary letter mapping
+\item \textbf{knowntext-sample.txt} - a text file relating to the original plaintext
 \item \textbf{plaintext-sample.txt} - the correct plaintext that your program should output
 \end{enumerate}
 
@@ -357,8 +357,35 @@ Another way we can approach finding the right alphabet mapping is to use an AI a
 \subsection{Program Implementation}
 The goal of this optional part is to try and create a new program called $SmartCrackCipher$ that improve your original CrackCipher program in order for it to be able to handle imperfect frequency correlations. It takes in the same inputs at the CrackCipher program. Feel free to try any of the approaches above or come up with your own approaches.
 
+\subsection{Testing your Implementation}
+In order to test your program, provided should be a folder called \textbf{SmartSample} with a sample ciphertext along with its corresponding plaintext and known text.\\
+\begin{enumerate}
+\item \textbf{ciphertext-sample.txt} - a sample ciphertext encrypted using a arbitrary letter mapping
+\item \textbf{knowntext-sample.txt} - a text file relating to the original plaintext
+\item \textbf{plaintext-sample.txt} - the correct plaintext that your program should output
+\end{enumerate}
+
+\noindent\\ These sample texts are based on the same sample texts from part 2 of this assignment. The only difference between these texts and the texts from part 2 is that the known text is not perfectly representative of the plaintext trying to be recovered. Since the known text is not perfectly representative of the plaintext, there will be a few incorrect letter mappings. Since the ciphertext is exact same ciphertext from part 2, you can use the correct letter mapping determined in part 2 to evaluate the accuracy of your SmartCrackCipher program. \\
+
+\noindent The basic idea for evaluation would be as follows:
+\begin{enumerate}
+\item Run your SmartCrackCipher program against the ciphertext and known text provided.
+\item Compare the letter mapping your SmartCrackCipher program generated to the correct letter mapping determined in part 2.
+\end{enumerate}
+
+\subsection{Write Up}
+Along with your implementation you should submit a \textbf{PDF} that answers the following questions:
+\begin{enumerate}
+\item Briefly describe the approach you took.
+\item What letter mapping does your program start off with? and how does your program iteratively try to find better letter mappings?
+\item What metric did you use in order to grade letter mappings being searched. Another way to think about this question is, "How does your program figure out which letter mapping to keep or which one to reject?"
+\item How does your program determine when to stop?
+\item How did your program perform on the sample cipher text?
+\end{enumerate}
+
+
 \section{Submission}
-To submit your project, simply submit your source code for CrackCaesar, CrackCipher, and SmartCrackCipher (if you tried to implement SmartCrackCipher) directly to sakai as is. \textbf{Do not compress your source code}, as it will be easier for us to grade. Also, do not upload any of the sample text files supplied, including the dictionary of common words. We will use different ones for grading.
+To submit your project, simply submit your source code for CrackCaesar, CrackCipher, and SmartCrackCipher/write up (if you tried part 3) directly to sakai as is. \textbf{Do not compress your source code}, as it will be easier for us to grade. Also, do not upload any of the sample text files supplied, including the dictionary of common words. We will use different ones for grading.
 
 \section{Additional Notes and Hints}
 \begin{info}[Querying the set of common words:] % Information block
